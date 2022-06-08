@@ -71,6 +71,7 @@ namespace busTicketApp
             dataGridView1.Columns[6].Name = "Tarih";
             dataGridView1.Columns[7].Name = "Saat";
             dataGridView1.Columns[8].Name = "KM";
+            var deneme = 3;
         }
 
         private void btn_seferGetir_Click(object sender, EventArgs e)
