@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="sehirMesafeModel1StoreContainer" CdmEntityContainer="sehirMesafeEntities1">
+    <EntitySetMapping Name="sehirMesafe">
+      <EntityTypeMapping TypeName="sehirMesafeModel1.sehirMesafe">
+        <MappingFragment StoreEntitySet="sehirMesafe">
+          <ScalarProperty Name="ilPlakaNo" ColumnName="ilPlakaNo" />
+          <ScalarProperty Name="ilAdi" ColumnName="ilAdi" />
+          <ScalarProperty Name="mesafe" ColumnName="mesafe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

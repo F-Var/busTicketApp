@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="biletVeritabaniModelStoreContainer" CdmEntityContainer="biletVeritabaniEntities">
+    <EntitySetMapping Name="sehirlerListesi">
+      <EntityTypeMapping TypeName="biletVeritabaniModel.sehirlerListesi">
+        <MappingFragment StoreEntitySet="sehirlerListesi">
+          <ScalarProperty Name="sehir_id" ColumnName="sehir_id" />
+          <ScalarProperty Name="sehirAdi" ColumnName="sehirAdi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sehirMesafe">
+      <EntityTypeMapping TypeName="biletVeritabaniModel.sehirMesafe">
+        <MappingFragment StoreEntitySet="sehirMesafe">
+          <ScalarProperty Name="ilPlakaNo" ColumnName="ilPlakaNo" />
+          <ScalarProperty Name="ilAdi" ColumnName="ilAdi" />
+          <ScalarProperty Name="mesafe" ColumnName="mesafe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="guzergah">
+      <EntityTypeMapping TypeName="biletVeritabaniModel.guzergah">
+        <MappingFragment StoreEntitySet="guzergah">
+          <ScalarProperty Name="durak" ColumnName="durak" />
+          <ScalarProperty Name="nereye" ColumnName="nereye" />
+          <ScalarProperty Name="nereden" ColumnName="nereden" />
+          <ScalarProperty Name="guzergah_id" ColumnName="guzergah_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="otobus">
+      <EntityTypeMapping TypeName="biletVeritabaniModel.otobus">
+        <MappingFragment StoreEntitySet="otobus">
+          <ScalarProperty Name="koltukDuzen" ColumnName="koltukDuzen" />
+          <ScalarProperty Name="turu" ColumnName="turu" />
+          <ScalarProperty Name="koltukSayisi" ColumnName="koltukSayisi" />
+          <ScalarProperty Name="adi" ColumnName="adi" />
+          <ScalarProperty Name="otobus_id" ColumnName="otobus_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="seferBilet">
+      <EntityTypeMapping TypeName="biletVeritabaniModel.seferBilet">
+        <MappingFragment StoreEntitySet="seferBilet">
+          <ScalarProperty Name="fiyat" ColumnName="fiyat" />
+          <ScalarProperty Name="tarihSaat" ColumnName="tarihSaat" />
+          <ScalarProperty Name="cinsiyet" ColumnName="cinsiyet" />
+          <ScalarProperty Name="yolcuSoyad" ColumnName="yolcuSoyad" />
+          <ScalarProperty Name="yolcuAd" ColumnName="yolcuAd" />
+          <ScalarProperty Name="kalkisTarih" ColumnName="kalkisTarih" />
+          <ScalarProperty Name="kalkisSaati" ColumnName="kalkisSaati" />
+          <ScalarProperty Name="koltukNo" ColumnName="koltukNo" />
+          <ScalarProperty Name="sefer_id" ColumnName="sefer_id" />
+          <ScalarProperty Name="guzergah_id" ColumnName="guzergah_id" />
+          <ScalarProperty Name="otobus_id" ColumnName="otobus_id" />
+          <ScalarProperty Name="seferBilet_id" ColumnName="seferBilet_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="seferKoltuk">
+      <EntityTypeMapping TypeName="biletVeritabaniModel.seferKoltuk">
+        <MappingFragment StoreEntitySet="seferKoltuk">
+          <ScalarProperty Name="koltukNo" ColumnName="koltukNo" />
+          <ScalarProperty Name="cinsiyet" ColumnName="cinsiyet" />
+          <ScalarProperty Name="sefer_id" ColumnName="sefer_id" />
+          <ScalarProperty Name="seferKoltuk_id" ColumnName="seferKoltuk_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="seferler">
+      <EntityTypeMapping TypeName="biletVeritabaniModel.seferler">
+        <MappingFragment StoreEntitySet="seferler">
+          <ScalarProperty Name="kalkisTarihi" ColumnName="kalkisTarihi" />
+          <ScalarProperty Name="fiyat" ColumnName="fiyat" />
+          <ScalarProperty Name="kalkisSaati" ColumnName="kalkisSaati" />
+          <ScalarProperty Name="guzergah_id" ColumnName="guzergah_id" />
+          <ScalarProperty Name="otobus_id" ColumnName="otobus_id" />
+          <ScalarProperty Name="sefer_id" ColumnName="sefer_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

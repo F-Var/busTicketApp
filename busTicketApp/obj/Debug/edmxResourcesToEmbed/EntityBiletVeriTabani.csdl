@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="biletVeritabaniModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="sehirlerListesi">
+    <Key>
+      <PropertyRef Name="sehir_id" />
+    </Key>
+    <Property Name="sehir_id" Type="Double" Nullable="false" />
+    <Property Name="sehirAdi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sehirMesafe">
+    <Key>
+      <PropertyRef Name="ilPlakaNo" />
+    </Key>
+    <Property Name="ilPlakaNo" Type="Int32" Nullable="false" />
+    <Property Name="ilAdi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="mesafe" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="biletVeritabaniEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sehirlerListesi" EntityType="Self.sehirlerListesi" />
+    <EntitySet Name="sehirMesafe" EntityType="Self.sehirMesafe" />
+    <EntitySet Name="guzergah" EntityType="biletVeritabaniModel.guzergah" />
+    <EntitySet Name="otobus" EntityType="biletVeritabaniModel.otobus" />
+    <EntitySet Name="seferBilet" EntityType="biletVeritabaniModel.seferBilet" />
+    <EntitySet Name="seferKoltuk" EntityType="biletVeritabaniModel.seferKoltuk" />
+    <EntitySet Name="seferler" EntityType="biletVeritabaniModel.seferler" />
+  </EntityContainer>
+  <EntityType Name="guzergah">
+    <Key>
+      <PropertyRef Name="guzergah_id" />
+    </Key>
+    <Property Name="guzergah_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nereden" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="nereye" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="durak" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="otobus">
+    <Key>
+      <PropertyRef Name="otobus_id" />
+    </Key>
+    <Property Name="otobus_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="adi" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="koltukSayisi" Type="Int32" Nullable="false" />
+    <Property Name="turu" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="koltukDuzen" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="seferBilet">
+    <Key>
+      <PropertyRef Name="seferBilet_id" />
+    </Key>
+    <Property Name="seferBilet_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="otobus_id" Type="Int32" Nullable="false" />
+    <Property Name="guzergah_id" Type="Int32" Nullable="false" />
+    <Property Name="sefer_id" Type="Int32" Nullable="false" />
+    <Property Name="koltukNo" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="kalkisSaati" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="kalkisTarih" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="yolcuAd" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="yolcuSoyad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="cinsiyet" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="tarihSaat" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="fiyat" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="seferKoltuk">
+    <Key>
+      <PropertyRef Name="seferKoltuk_id" />
+    </Key>
+    <Property Name="seferKoltuk_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sefer_id" Type="Int32" Nullable="false" />
+    <Property Name="cinsiyet" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="koltukNo" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="seferler">
+    <Key>
+      <PropertyRef Name="sefer_id" />
+    </Key>
+    <Property Name="sefer_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="otobus_id" Type="Int32" Nullable="false" />
+    <Property Name="guzergah_id" Type="Int32" Nullable="false" />
+    <Property Name="kalkisSaati" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="fiyat" Type="Int32" Nullable="false" />
+    <Property Name="kalkisTarihi" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+</Schema>

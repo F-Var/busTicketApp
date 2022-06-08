@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="biletVeritabaniModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="guzergah">
+    <Key>
+      <PropertyRef Name="guzergah_id" />
+    </Key>
+    <Property Name="guzergah_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nereden" Type="int" Nullable="false" />
+    <Property Name="nereye" Type="int" Nullable="false" />
+    <Property Name="durak" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="otobus">
+    <Key>
+      <PropertyRef Name="otobus_id" />
+    </Key>
+    <Property Name="otobus_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="adi" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="koltukSayisi" Type="int" Nullable="false" />
+    <Property Name="turu" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="koltukDuzen" Type="nvarchar" MaxLength="70" Nullable="false" />
+  </EntityType>
+  <EntityType Name="seferBilet">
+    <Key>
+      <PropertyRef Name="seferBilet_id" />
+    </Key>
+    <Property Name="seferBilet_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="otobus_id" Type="int" Nullable="false" />
+    <Property Name="guzergah_id" Type="int" Nullable="false" />
+    <Property Name="sefer_id" Type="int" Nullable="false" />
+    <Property Name="koltukNo" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="kalkisSaati" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="kalkisTarih" Type="datetime" Nullable="false" />
+    <Property Name="yolcuAd" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="yolcuSoyad" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="cinsiyet" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="tarihSaat" Type="datetime" Nullable="false" />
+    <Property Name="fiyat" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="seferKoltuk">
+    <Key>
+      <PropertyRef Name="seferKoltuk_id" />
+    </Key>
+    <Property Name="seferKoltuk_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sefer_id" Type="int" Nullable="false" />
+    <Property Name="cinsiyet" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="koltukNo" Type="nvarchar" MaxLength="3" Nullable="false" />
+  </EntityType>
+  <EntityType Name="seferler">
+    <Key>
+      <PropertyRef Name="sefer_id" />
+    </Key>
+    <Property Name="sefer_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="otobus_id" Type="int" Nullable="false" />
+    <Property Name="guzergah_id" Type="int" Nullable="false" />
+    <Property Name="kalkisSaati" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="fiyat" Type="int" Nullable="false" />
+    <Property Name="kalkisTarihi" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sehirMesafe">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ilPlakaNo" Type="int" Nullable="false" />
+    <Property Name="ilAdi" Type="nvarchar" MaxLength="255" />
+    <Property Name="mesafe" Type="nvarchar(max)" />
+  </EntityType>
+  <Association Name="FK_seferBilet_guzergah">
+    <End Role="guzergah" Type="Self.guzergah" Multiplicity="1" />
+    <End Role="seferBilet" Type="Self.seferBilet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="guzergah">
+        <PropertyRef Name="guzergah_id" />
+      </Principal>
+      <Dependent Role="seferBilet">
+        <PropertyRef Name="guzergah_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_seferBilet_otobus">
+    <End Role="otobus" Type="Self.otobus" Multiplicity="1" />
+    <End Role="seferBilet" Type="Self.seferBilet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="otobus">
+        <PropertyRef Name="otobus_id" />
+      </Principal>
+      <Dependent Role="seferBilet">
+        <PropertyRef Name="otobus_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_seferBilet_seferler">
+    <End Role="seferler" Type="Self.seferler" Multiplicity="1" />
+    <End Role="seferBilet" Type="Self.seferBilet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="seferler">
+        <PropertyRef Name="sefer_id" />
+      </Principal>
+      <Dependent Role="seferBilet">
+        <PropertyRef Name="sefer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_seferKoltuk_seferler">
+    <End Role="seferler" Type="Self.seferler" Multiplicity="1" />
+    <End Role="seferKoltuk" Type="Self.seferKoltuk" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="seferler">
+        <PropertyRef Name="sefer_id" />
+      </Principal>
+      <Dependent Role="seferKoltuk">
+        <PropertyRef Name="sefer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_seferler_guzergah">
+    <End Role="guzergah" Type="Self.guzergah" Multiplicity="1" />
+    <End Role="seferler" Type="Self.seferler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="guzergah">
+        <PropertyRef Name="guzergah_id" />
+      </Principal>
+      <Dependent Role="seferler">
+        <PropertyRef Name="guzergah_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_seferler_otobus">
+    <End Role="otobus" Type="Self.otobus" Multiplicity="1" />
+    <End Role="seferler" Type="Self.seferler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="otobus">
+        <PropertyRef Name="otobus_id" />
+      </Principal>
+      <Dependent Role="seferler">
+        <PropertyRef Name="otobus_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="biletVeritabaniModelStoreContainer">
+    <EntitySet Name="guzergah" EntityType="Self.guzergah" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="otobus" EntityType="Self.otobus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="seferBilet" EntityType="Self.seferBilet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="seferKoltuk" EntityType="Self.seferKoltuk" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="seferler" EntityType="Self.seferler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sehirMesafe" EntityType="Self.sehirMesafe" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_seferBilet_guzergah" Association="Self.FK_seferBilet_guzergah">
+      <End Role="guzergah" EntitySet="guzergah" />
+      <End Role="seferBilet" EntitySet="seferBilet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_seferBilet_otobus" Association="Self.FK_seferBilet_otobus">
+      <End Role="otobus" EntitySet="otobus" />
+      <End Role="seferBilet" EntitySet="seferBilet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_seferBilet_seferler" Association="Self.FK_seferBilet_seferler">
+      <End Role="seferler" EntitySet="seferler" />
+      <End Role="seferBilet" EntitySet="seferBilet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_seferKoltuk_seferler" Association="Self.FK_seferKoltuk_seferler">
+      <End Role="seferler" EntitySet="seferler" />
+      <End Role="seferKoltuk" EntitySet="seferKoltuk" />
+    </AssociationSet>
+    <AssociationSet Name="FK_seferler_guzergah" Association="Self.FK_seferler_guzergah">
+      <End Role="guzergah" EntitySet="guzergah" />
+      <End Role="seferler" EntitySet="seferler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_seferler_otobus" Association="Self.FK_seferler_otobus">
+      <End Role="otobus" EntitySet="otobus" />
+      <End Role="seferler" EntitySet="seferler" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

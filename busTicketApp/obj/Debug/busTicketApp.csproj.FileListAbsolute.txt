@@ -1,0 +1,14 @@
+D:\DERS\2. sınıf\Sis.Analiz.Tasarim\c#\busTicketApp\busTicketApp\bin\Debug\busTicketApp.exe.config
+D:\DERS\2. sınıf\Sis.Analiz.Tasarim\c#\busTicketApp\busTicketApp\bin\Debug\busTicketApp.exe
+D:\DERS\2. sınıf\Sis.Analiz.Tasarim\c#\busTicketApp\busTicketApp\bin\Debug\busTicketApp.pdb
+D:\DERS\2. sınıf\Sis.Analiz.Tasarim\c#\busTicketApp\busTicketApp\bin\Debug\EntityFramework.dll
+D:\DERS\2. sınıf\Sis.Analiz.Tasarim\c#\busTicketApp\busTicketApp\bin\Debug\EntityFramework.xml
+D:\DERS\2. sınıf\Sis.Analiz.Tasarim\c#\busTicketApp\busTicketApp\obj\Debug\busTicketApp.csproj.AssemblyReference.cache
+D:\DERS\2. sınıf\Sis.Analiz.Tasarim\c#\busTicketApp\busTicketApp\obj\Debug\busTicketApp.csproj.SuggestedBindingRedirects.cache
+D:\DERS\2. sınıf\Sis.Analiz.Tasarim\c#\busTicketApp\busTicketApp\obj\Debug\busTicketApp.Form1.resources
+D:\DERS\2. sınıf\Sis.Analiz.Tasarim\c#\busTicketApp\busTicketApp\obj\Debug\busTicketApp.Properties.Resources.resources
+D:\DERS\2. sınıf\Sis.Analiz.Tasarim\c#\busTicketApp\busTicketApp\obj\Debug\busTicketApp.csproj.GenerateResource.cache
+D:\DERS\2. sınıf\Sis.Analiz.Tasarim\c#\busTicketApp\busTicketApp\obj\Debug\busTicketApp.csproj.CoreCompileInputs.cache
+D:\DERS\2. sınıf\Sis.Analiz.Tasarim\c#\busTicketApp\busTicketApp\obj\Debug\busTicketApp.csproj.CopyComplete
+D:\DERS\2. sınıf\Sis.Analiz.Tasarim\c#\busTicketApp\busTicketApp\obj\Debug\busTicketApp.exe
+D:\DERS\2. sınıf\Sis.Analiz.Tasarim\c#\busTicketApp\busTicketApp\obj\Debug\busTicketApp.pdb

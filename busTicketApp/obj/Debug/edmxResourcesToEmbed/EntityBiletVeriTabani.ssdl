@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="biletVeritabaniModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="guzergah">
+    <Key>
+      <PropertyRef Name="guzergah_id" />
+    </Key>
+    <Property Name="guzergah_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nereden" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="nereye" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="durak" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="otobus">
+    <Key>
+      <PropertyRef Name="otobus_id" />
+    </Key>
+    <Property Name="otobus_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="adi" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="koltukSayisi" Type="int" Nullable="false" />
+    <Property Name="turu" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="koltukDuzen" Type="nvarchar" MaxLength="70" Nullable="false" />
+  </EntityType>
+  <EntityType Name="seferBilet">
+    <Key>
+      <PropertyRef Name="seferBilet_id" />
+    </Key>
+    <Property Name="seferBilet_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="otobus_id" Type="int" Nullable="false" />
+    <Property Name="guzergah_id" Type="int" Nullable="false" />
+    <Property Name="sefer_id" Type="int" Nullable="false" />
+    <Property Name="koltukNo" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="kalkisSaati" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="kalkisTarih" Type="datetime" Nullable="false" />
+    <Property Name="yolcuAd" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="yolcuSoyad" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="cinsiyet" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="tarihSaat" Type="datetime" Nullable="false" />
+    <Property Name="fiyat" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="seferKoltuk">
+    <Key>
+      <PropertyRef Name="seferKoltuk_id" />
+    </Key>
+    <Property Name="seferKoltuk_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sefer_id" Type="int" Nullable="false" />
+    <Property Name="cinsiyet" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="koltukNo" Type="nvarchar" MaxLength="3" Nullable="false" />
+  </EntityType>
+  <EntityType Name="seferler">
+    <Key>
+      <PropertyRef Name="sefer_id" />
+    </Key>
+    <Property Name="sefer_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="otobus_id" Type="int" Nullable="false" />
+    <Property Name="guzergah_id" Type="int" Nullable="false" />
+    <Property Name="kalkisSaati" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="fiyat" Type="int" Nullable="false" />
+    <Property Name="kalkisTarihi" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sehirlerListesi">
+    <Key>
+      <PropertyRef Name="sehir_id" />
+    </Key>
+    <Property Name="sehir_id" Type="float" Nullable="false" />
+    <Property Name="sehirAdi" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="sehirMesafe">
+    <Key>
+      <PropertyRef Name="ilPlakaNo" />
+    </Key>
+    <Property Name="ilPlakaNo" Type="int" Nullable="false" />
+    <Property Name="ilAdi" Type="nvarchar" MaxLength="255" />
+    <Property Name="mesafe" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="biletVeritabaniModelStoreContainer">
+    <EntitySet Name="guzergah" EntityType="Self.guzergah" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="otobus" EntityType="Self.otobus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="seferBilet" EntityType="Self.seferBilet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="seferKoltuk" EntityType="Self.seferKoltuk" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="seferler" EntityType="Self.seferler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sehirlerListesi" EntityType="Self.sehirlerListesi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sehirMesafe" EntityType="Self.sehirMesafe" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

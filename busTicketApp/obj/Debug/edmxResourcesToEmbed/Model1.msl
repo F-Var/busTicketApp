@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="sehirMesafeModelStoreContainer" CdmEntityContainer="sehirMesafeEntities">
+    <EntitySetMapping Name="Sehirler">
+      <EntityTypeMapping TypeName="sehirMesafeModel.Sehirler">
+        <MappingFragment StoreEntitySet="Sehirler">
+          <ScalarProperty Name="sehir_id" ColumnName="sehir_id" />
+          <ScalarProperty Name="sehirAdi" ColumnName="sehirAdi" />
+          <ScalarProperty Name="ADANA" ColumnName="ADANA" />
+          <ScalarProperty Name="ADIYAMAN" ColumnName="ADIYAMAN" />
+          <ScalarProperty Name="AFYONKARAHİSAR" ColumnName="AFYONKARAHİSAR" />
+          <ScalarProperty Name="AĞRI" ColumnName="AĞRI" />
+          <ScalarProperty Name="AMASYA" ColumnName="AMASYA" />
+          <ScalarProperty Name="ANKARA" ColumnName="ANKARA" />
+          <ScalarProperty Name="ANTALYA" ColumnName="ANTALYA" />
+          <ScalarProperty Name="ARTVİN" ColumnName="ARTVİN" />
+          <ScalarProperty Name="AYDIN" ColumnName="AYDIN" />
+          <ScalarProperty Name="BALIKESİR" ColumnName="BALIKESİR" />
+          <ScalarProperty Name="BİLECİK" ColumnName="BİLECİK" />
+          <ScalarProperty Name="BİNGÖL" ColumnName="BİNGÖL" />
+          <ScalarProperty Name="BİTLİS" ColumnName="BİTLİS" />
+          <ScalarProperty Name="BOLU" ColumnName="BOLU" />
+          <ScalarProperty Name="BURDUR" ColumnName="BURDUR" />
+          <ScalarProperty Name="BURSA" ColumnName="BURSA" />
+          <ScalarProperty Name="ÇANAKKALE" ColumnName="ÇANAKKALE" />
+          <ScalarProperty Name="ÇANKIRI" ColumnName="ÇANKIRI" />
+          <ScalarProperty Name="ÇORUM" ColumnName="ÇORUM" />
+          <ScalarProperty Name="DENİZLİ" ColumnName="DENİZLİ" />
+          <ScalarProperty Name="DİYARBAKIR" ColumnName="DİYARBAKIR" />
+          <ScalarProperty Name="EDİRNE" ColumnName="EDİRNE" />
+          <ScalarProperty Name="ELAZIĞ" ColumnName="ELAZIĞ" />
+          <ScalarProperty Name="ERZİNCAN" ColumnName="ERZİNCAN" />
+          <ScalarProperty Name="ERZURUM" ColumnName="ERZURUM" />
+          <ScalarProperty Name="ESKİŞEHİR" ColumnName="ESKİŞEHİR" />
+          <ScalarProperty Name="GAZİANTEP" ColumnName="GAZİANTEP" />
+          <ScalarProperty Name="GİRESUN" ColumnName="GİRESUN" />
+          <ScalarProperty Name="GÜMÜŞHANE" ColumnName="GÜMÜŞHANE" />
+          <ScalarProperty Name="HAKKARİ" ColumnName="HAKKARİ" />
+          <ScalarProperty Name="HATAY" ColumnName="HATAY" />
+          <ScalarProperty Name="ISPARTA" ColumnName="ISPARTA" />
+          <ScalarProperty Name="MERSİN" ColumnName="MERSİN" />
+          <ScalarProperty Name="İSTANBUL" ColumnName="İSTANBUL" />
+          <ScalarProperty Name="İZMİR" ColumnName="İZMİR" />
+          <ScalarProperty Name="KARS" ColumnName="KARS" />
+          <ScalarProperty Name="KASTAMONU" ColumnName="KASTAMONU" />
+          <ScalarProperty Name="KAYSERİ" ColumnName="KAYSERİ" />
+          <ScalarProperty Name="KIRKLARELİ" ColumnName="KIRKLARELİ" />
+          <ScalarProperty Name="KIRŞEHİR" ColumnName="KIRŞEHİR" />
+          <ScalarProperty Name="KOCAELİ__İZMİT_" ColumnName="KOCAELİ (İZMİT)" />
+          <ScalarProperty Name="KONYA" ColumnName="KONYA" />
+          <ScalarProperty Name="KÜTAHYA" ColumnName="KÜTAHYA" />
+          <ScalarProperty Name="MALATYA" ColumnName="MALATYA" />
+          <ScalarProperty Name="MANİSA" ColumnName="MANİSA" />
+          <ScalarProperty Name="KAHRAMANMARAŞ" ColumnName="KAHRAMANMARAŞ" />
+          <ScalarProperty Name="MARDİN" ColumnName="MARDİN" />
+          <ScalarProperty Name="MUĞLA" ColumnName="MUĞLA" />
+          <ScalarProperty Name="MUŞ" ColumnName="MUŞ" />
+          <ScalarProperty Name="NEVŞEHİR" ColumnName="NEVŞEHİR" />
+          <ScalarProperty Name="NİĞDE" ColumnName="NİĞDE" />
+          <ScalarProperty Name="ORDU" ColumnName="ORDU" />
+          <ScalarProperty Name="RİZE" ColumnName="RİZE" />
+          <ScalarProperty Name="SAKARYA__ADAPAZARI_" ColumnName="SAKARYA (ADAPAZARI)" />
+          <ScalarProperty Name="SAMSUN" ColumnName="SAMSUN" />
+          <ScalarProperty Name="SİİRT" ColumnName="SİİRT" />
+          <ScalarProperty Name="SİNOP" ColumnName="SİNOP" />
+          <ScalarProperty Name="SİVAS" ColumnName="SİVAS" />
+          <ScalarProperty Name="TEKİRDAĞ" ColumnName="TEKİRDAĞ" />
+          <ScalarProperty Name="TOKAT" ColumnName="TOKAT" />
+          <ScalarProperty Name="TRABZON" ColumnName="TRABZON" />
+          <ScalarProperty Name="TUNCELİ" ColumnName="TUNCELİ" />
+          <ScalarProperty Name="ŞANLIURFA" ColumnName="ŞANLIURFA" />
+          <ScalarProperty Name="UŞAK" ColumnName="UŞAK" />
+          <ScalarProperty Name="VAN" ColumnName="VAN" />
+          <ScalarProperty Name="YOZGAT" ColumnName="YOZGAT" />
+          <ScalarProperty Name="ZONGULDAK" ColumnName="ZONGULDAK" />
+          <ScalarProperty Name="AKSARAY" ColumnName="AKSARAY" />
+          <ScalarProperty Name="BAYBURT" ColumnName="BAYBURT" />
+          <ScalarProperty Name="KARAMAN" ColumnName="KARAMAN" />
+          <ScalarProperty Name="KIRIKKALE" ColumnName="KIRIKKALE" />
+          <ScalarProperty Name="BATMAN" ColumnName="BATMAN" />
+          <ScalarProperty Name="ŞIRNAK" ColumnName="ŞIRNAK" />
+          <ScalarProperty Name="BARTIN" ColumnName="BARTIN" />
+          <ScalarProperty Name="ARDAHAN" ColumnName="ARDAHAN" />
+          <ScalarProperty Name="IĞDIR" ColumnName="IĞDIR" />
+          <ScalarProperty Name="YALOVA" ColumnName="YALOVA" />
+          <ScalarProperty Name="KARABÜK" ColumnName="KARABÜK" />
+          <ScalarProperty Name="KİLİS" ColumnName="KİLİS" />
+          <ScalarProperty Name="OSMANİYE" ColumnName="OSMANİYE" />
+          <ScalarProperty Name="DÜZCE" ColumnName="DÜZCE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
